@@ -5,4 +5,7 @@
     <string name="agregarApellido">Apellido</string>
     <string name="agregarNumero">Numero</string>
     <string name="agregarAgregarBt">AGREGAR</string>
+    <string name="TituloNombre">Nombre</string>
+    <string name="TituloNumero">Numero</string>
+    <string name="TituoEmail">Email</string>
 </resources>
