@@ -50,7 +50,7 @@ public void agregarContactoConIntent(View view){
 
             //Agregar lista
 
-            Administrador.añadirContactoCreado(new CrearContacto(nombreTv.getText().toString(),apellidoTv.getText().toString(),numeroTv.getText().toString()).agregar());
+           // Administrador.añadirContactoCreado(new CrearContacto(nombreTv.getText().toString(),apellidoTv.getText().toString(),numeroTv.getText().toString()).agregar());
            // new debug(5);
             startActivity(intent);
 
