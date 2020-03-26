@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tareaAgregarContacto</string>
+    <string name="agregarContactoTv">AGREGAR CONTACTO</string>
+    <string name="agregarNombreTv">Nombre</string>
+    <string name="agregarApellido">Apellido</string>
+    <string name="agregarNumero">Numero</string>
+    <string name="agregarAgregarBt">AGREGAR</string>
+</resources>
