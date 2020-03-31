@@ -5,14 +5,14 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
+import controller.Myadptador;
+import model.Usuario;
+
 public class Administrador extends AppCompatActivity {
-
-    public static  String text = "";
-    public static ArrayList<LinearLayout> arrayList = new ArrayList<>();
-
-    public static void añadirContactoCreado(LinearLayout linearLayout){
-        arrayList.add(linearLayout);
-    }
+    protected FirebaseFirestore db = FirebaseFirestore.getInstance();
+    protected ArrayList<Usuario> database = new ArrayList<>();
 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "102606152661",
+    "firebase_url": "https://contactosenlanuve.firebaseio.com",
+    "project_id": "contactosenlanuve",
+    "storage_bucket": "contactosenlanuve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102606152661:android:c02ca9539c1c4e293f935c",
+        "android_client_info": {
+          "package_name": "com.example.tareaagregarcontacto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102606152661-evsbltc92jchhgn5fdkib92qbd7u1g6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGxav25LqLEZrfy_1CAsrxE5i47rlEn8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102606152661-evsbltc92jchhgn5fdkib92qbd7u1g6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

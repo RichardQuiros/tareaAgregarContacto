@@ -49,11 +49,13 @@ public class Myadptador extends BaseAdapter {
 
         ImageView imageView = view.findViewById(R.id.celda1PerfilImv);
         TextView nombre = view.findViewById(R.id.celda1NombreTv);
+        TextView apellido = view.findViewById(R.id.celda1ApellidoTv);
         TextView telefono = view.findViewById(R.id.celdaTelefonoTv);
         TextView email = view.findViewById(R.id.celda1EmailTv);
 
         imageView.setImageResource(arrayList.get(position).getImgurl());
-        nombre.setText(arrayList.get(position).getNombre()+" "+arrayList.get(position).getApellido());
+        nombre.setText(arrayList.get(position).getNombre());
+        apellido.setText(arrayList.get(position).getApellido());
         telefono.setText(arrayList.get(position).getTelefono());
         email.setText(arrayList.get(position).getEmail());
         return view;
