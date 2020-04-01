@@ -43,24 +43,27 @@
 
         <ImageButton
             android:id="@+id/celdaGalleriaBt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+            android:background="@drawable/style_bg2"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
 
         <ImageButton
             android:id="@+id/celdaCamaraBt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+            android:background="@drawable/style_bg2"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
 
         <ImageButton
             android:id="@+id/celdaColorBt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+            android:background="@drawable/style_bg2"
+            app:srcCompat="@drawable/shape_circle_blue_gradient" />
     </LinearLayout>
 
     <LinearLayout

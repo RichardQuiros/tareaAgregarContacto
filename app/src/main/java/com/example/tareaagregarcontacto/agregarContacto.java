@@ -1,11 +1,15 @@
 package com.example.tareaagregarcontacto;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -27,6 +31,7 @@ public class agregarContacto extends Administrador {
     TextView numeroTv;
     Button agregarBt;
     ImageButton agregarPerfil;
+    Uri path;
     Intent intent;
     Switch switchAgregar;
     Dialog dialog;
@@ -38,6 +43,7 @@ public class agregarContacto extends Administrador {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_contacto);
         init();
+        popupPerfil();
         escuchadorSwicht();
     }
 
@@ -55,6 +61,11 @@ public class agregarContacto extends Administrador {
             dialog = new Dialog(this);
             agregarLayoutParametros = findViewById(R.id.agregarLayoutParametros);
             intent = new Intent(this,MainActivity.class);
+            refesh();
+    }
+
+    public void refesh(){
+        agregarPerfil.refreshDrawableState();
     }
 
 
@@ -80,13 +91,49 @@ public class agregarContacto extends Administrador {
             public void onClick(View v) {
                 ImageButton close;
                 ImageButton camara;
-                ImageButton galleria;
+                final ImageButton galleria;
                 ImageButton color;
-               // dialog.setContentView(R.layout);
+               dialog.setContentView(R.layout.celda_seleccion_perfil);
+               close = dialog.findViewById(R.id.celdaCancelarBt);
+               camara = dialog.findViewById(R.id.celdaCamaraBt);
+               galleria = dialog.findViewById(R.id.celdaGalleriaBt);
+               color = dialog.findViewById(R.id.celdaColorBt);
+
+               close.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       dialog.dismiss();
+                   }
+               });
+               galleria.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       selecImg();
+                       dialog.dismiss();
+                   }
+               });
+
+        dialog.show();
             }
         });
     }
 
+    //selecionar y cargar imagenes desde almacenamiento
+    public void selecImg(){
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        intent.setType("image/");
+        startActivityForResult(intent.createChooser(intent,"Seleccione la App"),10);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode==RESULT_OK){
+            Uri path = data.getData();
+            this.path = path;
+            agregarPerfil.setImageURI(path);
+        }
+    }
 
     //agregar contacto con intent
 public void agregarContactoConIntent(View view){
@@ -112,6 +159,7 @@ public void agregarContactoConIntent(View view){
         }
 
 }
+
 
 }
 
